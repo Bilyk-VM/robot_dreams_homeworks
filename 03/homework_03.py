@@ -1,4 +1,4 @@
-'''
+
 # Task one ======================================
 phrase = 'I love Python'
 kilkist = input('Введіть кількість повторень: ')
@@ -20,23 +20,23 @@ my_name = input('Введіть будьласка своє імя: ')
 my_age = 'My name is ' + my_name + '. I`m ' + str(age_in_years) + ' years old.'
 print(my_age)
 print()
-'''
+
 # Task five ======================================
 zminna_1 = input('Введіть значення першої змінної: ')
 zminna_1 = int(zminna_1)
 for i in range(1, 6):
     print('Значення першої змінної дорівнює', zminna_1)
     zminna_2 = input('Введіть значення другої змінної: ')
-    print('Значення оператора ==', zminna_1 == int(zminna_2))
-    print('Значення оператора !=', zminna_1 != int(zminna_2))
-    print('Значення оператора >=', zminna_1 >= int(zminna_2))
-    print('Значення оператора >', zminna_1 > int(zminna_2))
-    print('Значення оператора <=', zminna_1 <= int(zminna_2))
-    print('Значення оператора <', zminna_1 < int(zminna_2))
-    print()
+    print('Порівнюємо', i, 'пару чисел:')
+    print('Значення оператора порівняння ==', zminna_1 == int(zminna_2))
+    print('Значення оператора порівняння !=', zminna_1 != int(zminna_2))
+    print('Значення оператора порівняння >=', zminna_1 >= int(zminna_2))
+    print('Значення оператора порівняння >', zminna_1 > int(zminna_2))
+    print('Значення оператора порівняння <=', zminna_1 <= int(zminna_2))
+    print('Значення оператора порівняння <', zminna_1 < int(zminna_2), '\n', '\n')
     i += i
 print()
-'''
+
 # Task six ======================================
 a = 2
 print('Змінна а =', a)
@@ -46,4 +46,3 @@ c = 6
 print('Змінна c =', c)
 d = str(a) + str(b) + str(c)
 print('По умовам задачі, змінна d дорівнює:', d)
-'''
