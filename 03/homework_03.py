@@ -1,48 +1,27 @@
 
 # Task one ======================================
-phrase = 'I love Python'
-kilkist = input('Введіть кількість повторень: ')
-print(('' + phrase + '') * int(kilkist))
-print()
+print('I love Python' * 42)
 
 # Task two ======================================
-age_in_month = input('Введіть свій вік в місяцях: ')
-age_in_month = int(age_in_month)
-print('Ваш вік -',  age_in_month, 'місяців ')
+age_in_month = 458
 
 # Task three ======================================
 age_in_years = age_in_month // 12
-print('Тобто на даний момент вам -', age_in_years, 'років ')
-print()
 
 # Task four ======================================
-my_name = input('Введіть будьласка своє імя: ')
-my_age = 'My name is ' + my_name + '. I`m ' + str(age_in_years) + ' years old.'
-print(my_age)
-print()
+my_age = 'My name is Vasyl. I`m ' + str(age_in_years) + ' years old.'
 
 # Task five ======================================
-zminna_1 = input('Введіть значення першої змінної: ')
-zminna_1 = int(zminna_1)
-for i in range(1, 6):
-    print('Значення першої змінної дорівнює', zminna_1)
-    zminna_2 = input('Введіть значення другої змінної: ')
-    print('Порівнюємо', i, 'пару чисел:')
-    print('Значення оператора порівняння ==', zminna_1 == int(zminna_2))
-    print('Значення оператора порівняння !=', zminna_1 != int(zminna_2))
-    print('Значення оператора порівняння >=', zminna_1 >= int(zminna_2))
-    print('Значення оператора порівняння >', zminna_1 > int(zminna_2))
-    print('Значення оператора порівняння <=', zminna_1 <= int(zminna_2))
-    print('Значення оператора порівняння <', zminna_1 < int(zminna_2), '\n', '\n')
-    i += i
-print()
+zminna_1 = 1
+print(zminna_1 == 1)
+print(zminna_1 != 2)
+print(zminna_1 >= 3)
+print(zminna_1 > 4)
+print(zminna_1 <= 5)
 
 # Task six ======================================
 a = 2
-print('Змінна а =', a)
 b = 5
-print('Змінна b =', b)
 c = 6
-print('Змінна c =', c)
 d = str(a) + str(b) + str(c)
-print('По умовам задачі, змінна d дорівнює:', d)
+
