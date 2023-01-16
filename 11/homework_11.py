@@ -1,4 +1,4 @@
-# ==================== 12.1
+# ==================== 11.1
 # Написати декоратор
 # імпортуємо datetime
 from datetime import datetime
@@ -9,7 +9,8 @@ def deco(func):
         # виведем назву функції, за допомогою методу __name__
         print(f"\nFunction name is: '{func.__name__}'")
         # виведем час виклику функції
-        print(f"Today's date is: {datetime.now()}")
+        now = datetime.now()
+        print(f"Today's date is: {now.strftime('%d.%m.%Y %H:%M')}")
         # викликаємо функцію, яка буде декоруватись
         func(*args, **kwargs)
     return inner
@@ -29,13 +30,13 @@ print()
 second_func()
 
 
-# ==================== 12.2
+# ==================== 11.2
 # Створити кастомний Exception клас, який має повідомляти "Custom exception is occured"
 class MyCustomException(Exception):
    print("Custom exception is occured")
 
 
-# ==================== 12.3
+# ==================== 11.3
 # створюємо менеджер контексту
 class MyCustomException_2:
     def __enter__(self):
@@ -51,7 +52,7 @@ except Exception as e:
     print(f'Exception: {e}')
 
 
-# ==================== 12.4
+# ==================== 11.4
 # створимо конструкцію try except
 try:
     print('=' * 10)
