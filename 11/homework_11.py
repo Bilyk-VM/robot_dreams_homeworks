@@ -44,6 +44,8 @@ class MyCustomException_2:
         print('==========')
     def __exit__(self, exc_type, exc_val, exc_tb):
         print('==========\n')
+        if exc_type:
+            print(f'Exception: {exc_val}\n')
         return True
 
 # вкладемо контекстний менеджер в try except
