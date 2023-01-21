@@ -17,8 +17,6 @@ except FileNotFoundError:
     with open('phonebook.txt', 'w') as book:
         print('Створена початкова база абонентів')
         json.dump(my_dict, book, indent=2, ensure_ascii=False)
-        # indent дозволяє впорядковувати данні більш наочно
-
 
 # створюємо вічний цикл, щоб запроси йшли постійно, але зробимо можливість вийти, за допомогою вводу команди "exit"
 while True:
