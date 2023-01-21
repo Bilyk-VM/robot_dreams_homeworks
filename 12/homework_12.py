@@ -13,7 +13,7 @@ try:
     with open('phonebook.txt') as book:
         json.load(book)
         print('База абонентів завантажена')
-except:
+except FileNotFoundError:
     with open('phonebook.txt', 'w') as book:
         print('Створена початкова база абонентів')
         json.dump(my_dict, book, indent=2, ensure_ascii=False)
@@ -64,7 +64,6 @@ while True:
             my_dict = json.load(book)
             if my_dict.get(name) is None:
                 my_dict[name] = tel
-                print(my_dict)
                 with open('phonebook.txt', 'w') as book:
                     json.dump(my_dict, book, indent=2, ensure_ascii=False)
                 print(f'Створюєм новий запис абонента {name} з номером {tel}\n')
