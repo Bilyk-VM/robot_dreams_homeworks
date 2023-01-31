@@ -1,17 +1,16 @@
 import json
 
+# створимо словник
 my_dict = {
     'Dima': 1234,
     'Maks': 2234,
     'Stas': 3234,
     'Tim': 4234,
-    'Oleg': 5234
 }
-
 # Перевіримо чи існує файл phonebook.txt, якщо ні, то створимо його із заздалегідь створеною базою абонентів (my_dict)
 try:
     with open('phonebook.txt') as book:
-        json.load(book)
+        my_dict = json.load(book)
         print('База абонентів завантажена')
 except FileNotFoundError:
     with open('phonebook.txt', 'w') as book:
@@ -27,19 +26,15 @@ while True:
 
 # перевірка на ввід команди "stats" з підрахунком кількості абонентів в телефонній книзі
     elif user_input == 'stats':
-        with open('phonebook.txt') as book:
-            my_dict = json.load(book)
-            print(f"\nКількість абонентів в телефонній книзі: {len(my_dict)}\n")
+        print(f"Кількість абонентів в телефонній книзі: {len(my_dict)}\n")
         continue
 
 # превірка на ввід команди "list" з виводом усіх імен абонентів в телефонній книзі. Вивід на кожній стрічці окремо
     elif user_input == 'list':
-        with open('phonebook.txt') as book:
-            my_dict = json.load(book)
-            print(f"\nСписок всіх імен в телефонній книзі: ")
-            for k in my_dict.keys():
-                print(k)
-            print()
+        print(f"Список всіх імен в телефонній книзі: ")
+        for k in my_dict.keys():
+            print(k)
+        print()
         continue
 
 # розділимо введені данні на змінні з перевіркою введення на кількість слів
@@ -53,7 +48,7 @@ while True:
         name = split_input[1]
         tel = 'unkonwn'
     else:
-        print('Невірний формат вводу, спробуйте ще раз\n')
+        print('Невірний формат вводу, спробуйте ще раз')
         continue
 
 # перевіряємо на введення команди "add", якщо абонент вже є - повідомимо про це, якщо ні - добавимо в книгу
@@ -82,9 +77,7 @@ while True:
 
 # перевірка на введення команди "show", з виводом детальної інформації про абонента
     if comand == 'show':
-        with open('phonebook.txt', 'r') as book:
-            my_dict = json.load(book)
-            if my_dict.get(name) is None:
-                print(f"Абонента {name} немає в телефонній книзі\n")
-            else:
-                print(f'Абоненту {name}, відповідає номер телефону: {my_dict.get(name)}\n')
+        if my_dict.get(name) is None:
+            print(f"Абонента {name} немає в телефонній книзі\n")
+        else:
+            print(f'Абоненту {name}, відповідає номер телефону: {my_dict.get(name)}\n')
