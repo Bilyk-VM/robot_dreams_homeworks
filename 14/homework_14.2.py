@@ -20,7 +20,7 @@ except FileNotFoundError:
 # \b шукає границю початку і кінця виразу
 
 # скомпілюємо регулярний вираз в змінну pat
-pat = re.compile(r'\b([\w\d\.]{6,30}\b)@([\w]+\.[\w]+)\b')
+pat = re.compile(r'\b([\w\d\.]{2,30}\b)@([\w]+\.[\w]+)\b')
 # замінимо e-mail послідовністю *@*
 try:
     t = re.sub(pat, '*@*', text)
